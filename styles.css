@@ -1,0 +1,197 @@
+:root {
+  --light-cream: #F6F6E9;
+  --dark-gray: #272727;
+  --dark-green: #1F5014;
+  --vibrant-green: #457D58;
+  --faded-green: #7D9B76;
+  --light-green: #CBDDD1;
+  --medium-text: #979892;
+  --main-text: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-cream);
+  font-family: 'Barlow', sans-serif;
+}
+
+::selection {
+  background: var(--vibrant-green);
+}
+
+#landscape {
+  width: 60vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -2;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#landscape img {
+  height: 100%;
+}
+
+#backdrop {
+  top: -8vh;
+  left: 12vw;
+  position: absolute;
+  padding: 0;
+  font-size: 8em;
+  width: 30vw;
+  color: var(--light-cream);
+  text-shadow: 0 0 100px lightgray;
+  z-index: -1;
+}
+
+#backdrop h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 0.8em;
+}
+
+#overview {
+  margin-top: 20em;
+  padding: 5vh 5vw;
+}
+
+#overview > section {
+  padding-left: 5vw;
+}
+
+#overview h1 {
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: var(--dark-gray);
+  margin: 0;
+  opacity: 80%;
+}
+
+#overview h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  color: var(--dark-gray);
+  margin: 0;
+  max-width: 20vw;
+  min-width: 300px;
+}
+
+#overview p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  max-width: 20vw;
+  min-width: 300px;
+  opacity: 80%;
+}
+
+#resume {
+  background-color: var(--dark-green);
+  width: 60vw;
+  margin-left: 5vw;
+  color: var(--light-cream);
+  padding: 5vh 5vw;
+  display: flex;
+}
+
+#logo {
+  position: fixed;
+  left: 5vw;
+  top: 0;
+  background-color: var(--dark-green);
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+}
+
+#logo img {
+  width: 80px;
+  margin: 4rem 1rem 1rem 1rem;
+}
+
+@media screen and (min-width: 480px) and (max-width: 960px) {
+
+  #landscape {
+      display: none;
+  }
+
+  #backdrop {
+    top: -8vh;
+    right: 25vw;
+    left: unset;
+  }
+
+  #overview p {
+    max-width: 70vw;
+  }
+
+  #resume {
+    background-color: var(--dark-green);
+    width: 80vw;
+    margin-left: 5vw;
+    color: var(--light-cream);
+    padding: 2.5vh 5vw;
+    display: flex;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  #logo {
+    position: absolute;
+    left: 5vw;
+    top: 0;
+    background-color: var(--dark-green);
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+  }
+
+  #logo img {
+    width: 50px;
+    margin: 2rem 1rem 1rem 1rem;
+  }
+
+  #landscape {
+      display: none;
+  }
+
+  #backdrop {
+    top: -8vh;
+    left: 30vw;
+    font-size: 7em;
+  }
+
+  #overview {
+    margin-top: 10em;
+    padding: 5vh 5vw;
+  }
+
+  #overview h1 {
+    font-size: 1.5rem;
+  }
+
+  #overview h2 {
+    font-size: 3rem;
+  }
+
+  #overview p {
+    max-width: 80vw;
+  }
+
+  #resume {
+    background-color: var(--dark-green);
+    width: 90vw;
+    margin: 0;
+    color: var(--light-cream);
+    padding: 2.5vh 5vw;
+    display: flex;
+  }
+
+}
